@@ -1,0 +1,25 @@
+body{
+    background-size: cover;
+}
+
+.heading{
+    width: 100%;
+    font-size: 25px;
+    margin: 0px;
+}
+
+.heading span{
+    color: black;
+    font-size: 15px;
+}
+
+.songName_button{
+    width: 130px;
+    font-size: 20px;
+}
+
+canvas{
+    margin-top: 50px;
+    border: 5px solid white;
+    border-radius: 20px;
+}

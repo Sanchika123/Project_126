@@ -4,6 +4,8 @@ leftWristX= 0;
 leftWristY= 0;
 rightWristX= 0;
 rightWristY= 0;
+leftWrist_status= 0;
+score_leftWristY= 0;
 
 function preload(){
     peter_pan_song=loadSound('music.mp3');
@@ -38,4 +40,16 @@ function gotPoses(results){
 
 function draw(){     
 image(video, 0, 0, 600, 500); 
+leftWrist_status= peter_pan_song.isPlaying();
+fill("#ff0000");
+stroke('#ff0000');
+if(score_leftWristY > 0.2){
+    circle(leftWristX, leftWristY, 20);
+    harry_potter_song.stop();
+    if(leftWrist_status==false){
+        peter_pan_song.play();
+        document.getElementById('songName_button').innerHTML='Peter pan song is being played.'
+    }
+}
+
 } 
